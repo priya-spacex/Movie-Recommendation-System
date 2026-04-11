@@ -1,4 +1,4 @@
-<img width="1363" height="761" alt="Screenshot 2026-04-12 005955" src="https://github.com/user-attachments/assets/60b2607f-3c66-460b-9fde-c94f66eaeb8f" /># 🎬 AI Movie Recommendation System
+🎬 AI Movie Recommendation System
 ### TMDB Movies Dataset 2024 @kaggle
 
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
