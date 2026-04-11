@@ -1,0 +1,12 @@
+# Data files (Too big for GitHub)
+*.csv
+*.pkl
+dataset.csv
+
+# Environments
+venv/
+__pycache__/
+.env
+
+# OS files
+.DS_Store
