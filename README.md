@@ -35,39 +35,37 @@ The system follows a professional Data Science pipeline to turn raw text into in
 
 ```mermaid
    graph TD
-    %% Define NEW STYLES for high visibility in Light Mode
-    %% Colors use darker stroke and explicitly black text where possible
-    classDef ingestion fill:#e6f7ff,stroke:#105a99,stroke-width:2px,color:black,font-weight:bold;
-    classDef engineering fill:#fff7e6,stroke:#b26a0a,stroke-width:1px,color:black;
-    classDef coreEngine fill:#f6ffed,stroke:#2d6614,stroke-width:2px,stroke-dasharray: 5 5,color:black,font-weight:bold;
-    classDef interface fill:#fff0f6,stroke:#9c125d,stroke-width:2px,color:black;
+    %% Define Clean Styles
+    classDef blue fill:#e1f5fe,stroke:#01579b,color:#01579b
+    classDef orange fill:#fff3e0,stroke:#e65100,color:#e65100
+    classDef green fill:#f1f8e9,stroke:#33691e,color:#33691e
+    classDef pink fill:#fce4ec,stroke:#880e4f,color:#880e4f
 
-    subgraph Data_Ingestion [Data Ingestion Pipeline]
-        A[Raw Kaggle Dataset 930k TMDB Movies]:::ingestion --> B[Load into Pandas DataFrame]:::ingestion
+    subgraph Ingestion [Data Ingestion]
+        A[Raw Kaggle Dataset]:::blue --> B[Load Pandas DataFrame]:::blue
     end
 
-    subgraph Preprocessing_Pipeline [Data Engineering Pipeline]
-        B --> C{Quality Filter: vote_count > 500}:::engineering
-        C -- No --> D(Drop Movie):::engineering
-        C -- Yes --> E[Merge Metadata: Title + Genre + Overview]:::engineering
-        E --> F[Normalize Text: Lowercase & Clean]:::engineering
-        F --> G[Save processed_movies.csv]:::engineering
+    subgraph Engineering [Data Engineering]
+        B --> C{Vote Count > 500?}:::orange
+        C -->|No| D[Drop Movie]:::orange
+        C -->|Yes| E[Merge Metadata Tags]:::orange
+        E --> F[Normalize Text]:::orange
+        F --> G[Save processed_movies.csv]:::orange
     end
 
-    subgraph ML_Engine [AIML Core Engine]
-        G --> H[TF-IDF Vectorization]:::coreEngine
-        H --> I[Cosine Similarity Calculation]:::coreEngine
-        I --> J[Serialize with Pickle]:::coreEngine
+    subgraph AIML [ML Engine]
+        G --> H[TF-IDF Vectorization]:::green
+        H --> I[Cosine Similarity]:::green
+        I --> J[Serialize with Pickle]:::green
     end
 
-    subgraph Streamlit_UI [User Interface]
-        J --> K[Streamlit Web App]:::interface
-        L(User Selects Movie) --> K
-        K --> M[Load Pickle Files]:::engineering
-        M --> N[Retrieve Top 5 Similar Indices]:::coreEngine
-        N --> O[Map IDs to TMDB Image Server]:::engineering
-        O --> P[Display Posters & Ratings]:::interface
-    end<img width="1365" height="727" alt="Screenshot 2026-04-12 005820" src="https://github.com/user-attachments/assets/f2cce9dc-726c-452b-85f0-9a6b8fc59769" />
+    subgraph UI [Frontend]
+        J --> K[Streamlit Web App]:::pink
+        L(User Selection) --> K
+        K --> M[Fetch Similar Movies]:::pink
+        M --> N[Map TMDB Posters]:::pink
+        N --> O[Display Results]:::pink
+    end
 
 ```
     
