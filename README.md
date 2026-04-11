@@ -1,5 +1,5 @@
 # 🎬 AI Movie Recommendation System
-### Powered by TMDB 1M Dataset & NLP
+### TMDB Movies Dataset 2024 @kaggle
 
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
