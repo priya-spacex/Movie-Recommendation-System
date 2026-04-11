@@ -6,8 +6,7 @@
 ![Scikit-Learn](https://img.shields.io/badge/Machine_Learning-Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
 ## 📝 Brief Description
-This project is a high-performance **Content-Based Recommendation Engine** designed to handle large-scale datasets (930k+ records). It transforms unstructured text data into a searchable mathematical space, allowing users to discover movies similar to their favorites based on plot complexity, genre relationships, and thematic elements. By utilizing advanced NLP techniques, the system mimics the recommendation logic used by industry leaders like Netflix and Amazon.
-
+This Movie Recommendation System transforms raw TMDB movie data into a rich semantic space where films are connected by meaning, not just metadata. Using advanced NLP techniques, it captures plot nuances, genre overlaps, and thematic depth to deliver highly relevant suggestions—mirroring the intelligent recommendation experience of platforms like Netflix and Amazon Prime, where every choice feels personalized and intuitive.
 ## 🛠️ Technology Stack
 
 | Component | Technology | Use Case |
