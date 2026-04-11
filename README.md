@@ -31,8 +31,8 @@ This Movie Recommendation System transforms raw TMDB movie data into a rich sema
 
 ## 🧠 Flow Diagram
 The system follows a professional Data Science pipeline to turn raw text into insights:
-mermaid
-```
+
+```mermaid
    graph TD
     classDef data fill:#e6f7ff,stroke:#1890ff,stroke-width:2px;
     classDef process fill:#fff7e6,stroke:#ffa940,stroke-width:1px;
