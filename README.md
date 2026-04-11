@@ -1,4 +1,4 @@
-# 🎬 AI Movie Recommendation System
+<img width="1363" height="761" alt="Screenshot 2026-04-12 005955" src="https://github.com/user-attachments/assets/60b2607f-3c66-460b-9fde-c94f66eaeb8f" /># 🎬 AI Movie Recommendation System
 ### TMDB Movies Dataset 2024 @kaggle
 
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
@@ -25,46 +25,50 @@ This Movie Recommendation System transforms raw TMDB movie data into a rich sema
 - **Dynamic UI:** A sleek, dark-themed Streamlit interface featuring high-quality posters, live star ratings, and expandable overviews.
 
 ## 🎬 Output Snapshots
-
-
-  
+<img width="1365" height="727" alt="Screenshot 2026-04-12 005820" src="https://github.com/user-attachments/assets/9b811080-aa47-44a8-9f70-5e4969d5748a" />
+<img width="1364" height="755" alt="Screenshot 2026-04-12 005936" src="https://github.com/user-attachments/assets/f7860df1-8096-4db2-835e-1a75098add23" />
+<img width="1363" height="761" alt="Screenshot 2026-04-12 005955" src="https://github.com/user-attachments/assets/8882ad96-07b7-4ed8-aa79-8044f5ab8597" />
+<img width="1365" height="750" alt="Screenshot 2026-04-12 010352" src="https://github.com/user-attachments/assets/446b457f-b943-4f63-adcd-3ea7d4cf759f" />
 
 ## 🧠 Flow Diagram
 The system follows a professional Data Science pipeline to turn raw text into insights:
 
 ```mermaid
    graph TD
-    classDef data fill:#e6f7ff,stroke:#1890ff,stroke-width:2px;
-    classDef process fill:#fff7e6,stroke:#ffa940,stroke-width:1px;
-    classDef core fill:#f6ffed,stroke:#52c41a,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef ui fill:#fff0f6,stroke:#eb2f96,stroke-width:2px;
+    %% Define NEW STYLES for high visibility in Light Mode
+    %% Colors use darker stroke and explicitly black text where possible
+    classDef ingestion fill:#e6f7ff,stroke:#105a99,stroke-width:2px,color:black,font-weight:bold;
+    classDef engineering fill:#fff7e6,stroke:#b26a0a,stroke-width:1px,color:black;
+    classDef coreEngine fill:#f6ffed,stroke:#2d6614,stroke-width:2px,stroke-dasharray: 5 5,color:black,font-weight:bold;
+    classDef interface fill:#fff0f6,stroke:#9c125d,stroke-width:2px,color:black;
 
-    subgraph Data_Ingestion [Data Ingestion]
-        A[Raw Kaggle Dataset 930k TMDB Movies]:::data --> B[Load into Pandas DataFrame]:::process
+    subgraph Data_Ingestion [Data Ingestion Pipeline]
+        A[Raw Kaggle Dataset 930k TMDB Movies]:::ingestion --> B[Load into Pandas DataFrame]:::ingestion
     end
 
     subgraph Preprocessing_Pipeline [Data Engineering Pipeline]
-        B --> C{Quality Filter: vote_count > 500}:::process
-        C -- No --> D(Drop Movie):::data
-        C -- Yes --> E[Merge Metadata: Title + Genre + Overview]:::process
-        E --> F[Normalize Text: Lowercase & Clean]:::process
-        F --> G[Save processed_movies.csv]:::data
+        B --> C{Quality Filter: vote_count > 500}:::engineering
+        C -- No --> D(Drop Movie):::engineering
+        C -- Yes --> E[Merge Metadata: Title + Genre + Overview]:::engineering
+        E --> F[Normalize Text: Lowercase & Clean]:::engineering
+        F --> G[Save processed_movies.csv]:::engineering
     end
 
     subgraph ML_Engine [AIML Core Engine]
-        G --> H[TF-IDF Vectorization]:::core
-        H --> I[Cosine Similarity Calculation]:::core
-        I --> J[Serialize with Pickle]:::data
+        G --> H[TF-IDF Vectorization]:::coreEngine
+        H --> I[Cosine Similarity Calculation]:::coreEngine
+        I --> J[Serialize with Pickle]:::coreEngine
     end
 
     subgraph Streamlit_UI [User Interface]
-        J --> K[Streamlit Web App]:::ui
+        J --> K[Streamlit Web App]:::interface
         L(User Selects Movie) --> K
-        K --> M[Load Pickle Files]:::process
-        M --> N[Retrieve Top 5 Similar Indices]:::core
-        N --> O[Map IDs to TMDB Image Server]:::process
-        O --> P[Display Posters & Ratings]:::ui
-    end
+        K --> M[Load Pickle Files]:::engineering
+        M --> N[Retrieve Top 5 Similar Indices]:::coreEngine
+        N --> O[Map IDs to TMDB Image Server]:::engineering
+        O --> P[Display Posters & Ratings]:::interface
+    end<img width="1365" height="727" alt="Screenshot 2026-04-12 005820" src="https://github.com/user-attachments/assets/f2cce9dc-726c-452b-85f0-9a6b8fc59769" />
+
 ```
     
 ## 🛠️ Installation & Setup
