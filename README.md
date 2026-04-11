@@ -33,41 +33,36 @@ This Movie Recommendation System transforms raw TMDB movie data into a rich sema
 The system follows a professional Data Science pipeline to turn raw text into insights:
 
     graph TD
-    %% Define styles for professional look
     classDef data fill:#e6f7ff,stroke:#1890ff,stroke-width:2px;
     classDef process fill:#fff7e6,stroke:#ffa940,stroke-width:1px;
     classDef core fill:#f6ffed,stroke:#52c41a,stroke-width:2px,stroke-dasharray: 5 5;
     classDef ui fill:#fff0f6,stroke:#eb2f96,stroke-width:2px;
 
-    %% Data Ingestion
     subgraph Data_Ingestion [Data Ingestion]
-        A[Raw Kaggle Dataset <br/> 930k+ TMDB Movies CSV]:::data --> B[Load into Pandas DataFrame]:::process
+        A[Raw Kaggle Dataset 930k TMDB Movies]:::data --> B[Load into Pandas DataFrame]:::process
     end
 
-    %% Preprocessing (preprocess.py)
     subgraph Preprocessing_Pipeline [Data Engineering Pipeline]
-        B --> C{Quality Filter: <br/> vote_count > 500}:::process
+        B --> C{Quality Filter: vote_count > 500}:::process
         C -- No --> D(Drop Movie):::data
-        C -- Yes --> E[Merge Metadata: <br/> Title + Genre + Overview = 'Tags']:::process
-        E --> F[Normalize Text: <br/> Lowercase & Clean]:::process
-        F --> G[Save processed_movies.csv <br/> 10k-15k Popular Movies]:::data
+        C -- Yes --> E[Merge Metadata: Title + Genre + Overview]:::process
+        E --> F[Normalize Text: Lowercase & Clean]:::process
+        F --> G[Save processed_movies.csv]:::data
     end
 
-    %% Recommender Engine (recommender.py)
     subgraph ML_Engine [AIML Core Engine]
-        G --> H[TF-IDF Vectorization <br/> Convert tags to sparse matrix]:::core
-        H --> I[Cosine Similarity Calculation <br/> Generate movie-to-movie scores]:::core
-        I --> J[Serialize with Pickle <br/> Save similarity.pkl & movie_list.pkl]:::data
+        G --> H[TF-IDF Vectorization]:::core
+        H --> I[Cosine Similarity Calculation]:::core
+        I --> J[Serialize with Pickle]:::data
     end
 
-    %% Frontend (app.py)
-    subgraph Streamlit_UI [User Interface & Rendering]
+    subgraph Streamlit_UI [User Interface]
         J --> K[Streamlit Web App]:::ui
         L(User Selects Movie) --> K
-        K --> M[Fetch Pickle Files <br/> Instant Load Cached Model]:::process
+        K --> M[Load Pickle Files]:::process
         M --> N[Retrieve Top 5 Similar Indices]:::core
-        N --> O[Map IDs to TMDB Public <br/> Image Server]:::process
-        O --> P[Display Posters, Ratings, <br/> & Overviews in Grid]:::ui
+        N --> O[Map IDs to TMDB Image Server]:::process
+        O --> P[Display Posters & Ratings]:::ui
     end
 
     
