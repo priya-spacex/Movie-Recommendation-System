@@ -31,8 +31,9 @@ This Movie Recommendation System transforms raw TMDB movie data into a rich sema
 
 ## 🧠 Flow Diagram
 The system follows a professional Data Science pipeline to turn raw text into insights:
-
-    graph TD
+mermaid
+```
+   graph TD
     classDef data fill:#e6f7ff,stroke:#1890ff,stroke-width:2px;
     classDef process fill:#fff7e6,stroke:#ffa940,stroke-width:1px;
     classDef core fill:#f6ffed,stroke:#52c41a,stroke-width:2px,stroke-dasharray: 5 5;
@@ -64,7 +65,7 @@ The system follows a professional Data Science pipeline to turn raw text into in
         N --> O[Map IDs to TMDB Image Server]:::process
         O --> P[Display Posters & Ratings]:::ui
     end
-
+```
     
 ## 🛠️ Installation & Setup
 1. **Clone the repo:**
