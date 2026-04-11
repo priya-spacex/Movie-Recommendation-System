@@ -25,10 +25,10 @@ This Movie Recommendation System transforms raw TMDB movie data into a rich sema
 - **Dynamic UI:** A sleek, dark-themed Streamlit interface featuring high-quality posters, live star ratings, and expandable overviews.
 
 ## 🎬 Output Snapshots
-<img width="1365" height="727" alt="Screenshot 2026-04-12 005820" src="https://github.com/user-attachments/assets/9b811080-aa47-44a8-9f70-5e4969d5748a" />
-<img width="1364" height="755" alt="Screenshot 2026-04-12 005936" src="https://github.com/user-attachments/assets/f7860df1-8096-4db2-835e-1a75098add23" />
-<img width="1363" height="761" alt="Screenshot 2026-04-12 005955" src="https://github.com/user-attachments/assets/8882ad96-07b7-4ed8-aa79-8044f5ab8597" />
-<img width="1365" height="750" alt="Screenshot 2026-04-12 010352" src="https://github.com/user-attachments/assets/446b457f-b943-4f63-adcd-3ea7d4cf759f" />
+<img width="500" height="300" alt="Screenshot 2026-04-12 005820" src="https://github.com/user-attachments/assets/9b811080-aa47-44a8-9f70-5e4969d5748a" />
+<img width="500" height="300" alt="Screenshot 2026-04-12 005936" src="https://github.com/user-attachments/assets/f7860df1-8096-4db2-835e-1a75098add23" />
+<img width="500" height="300" alt="Screenshot 2026-04-12 005955" src="https://github.com/user-attachments/assets/8882ad96-07b7-4ed8-aa79-8044f5ab8597" />
+<img width="500" height="300" alt="Screenshot 2026-04-12 010352" src="https://github.com/user-attachments/assets/446b457f-b943-4f63-adcd-3ea7d4cf759f" />
 
 ## 🧠 Flow Diagram
 The system follows a professional Data Science pipeline to turn raw text into insights:
