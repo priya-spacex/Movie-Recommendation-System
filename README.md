@@ -1,4 +1,4 @@
-🎬 AI Movie Recommendation System
+###🎬 AI Movie Recommendation System
 ### TMDB Movies Dataset 2024 @kaggle
 
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
