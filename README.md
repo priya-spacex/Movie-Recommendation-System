@@ -80,17 +80,12 @@ The system follows a professional Data Science pipeline to turn raw text into in
    pip install pandas scikit-learn streamlit
    ```
 
-3. **Data Preprocessing:**
+3. **Data Preprocessing & setting up the Engine:**
   ```bash
   python preprocess.py
   ```
 
-4. **Build the Engine:**
-  ```bash
-  python recommender.py
-  ```
-  
-5. **Launch the App:**
+4. **Launch the App:**
   ```bash
   streamlit run app.py
   ```
