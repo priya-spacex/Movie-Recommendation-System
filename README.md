@@ -102,7 +102,7 @@ The system follows a professional Data Science pipeline to turn raw text into in
 
   <br/><br/>
   
-  *"Transforming a million rows of data into a single perfect recommendation. One vector at a time."* 🚀 **[@aman-space](https://github.com/keshriaman231)**
+  *"Transforming a million rows of data into a single perfect recommendation. One vector at a time."* 🚀 **[priya-spacex][(https://github.com/priya-spacex)]**
 </div>
 
   
