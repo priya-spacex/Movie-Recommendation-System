@@ -96,8 +96,8 @@ The system follows a professional Data Science pipeline to turn raw text into in
   <h3>✨ Let's Connect!</h3>
   <p>Exploring the intersection of Big Data, Natural Language Processing, and Software Engineering.</p>
   
-  <a href="https://github.com/keshriaman231">
-    <img src="https://img.shields.io/badge/GitHub-keshriaman231-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <a href="https://github.com/priya-spacex">
+    <img src="https://img.shields.io/badge/GitHub-priya--spacex-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 
   <br/><br/>
